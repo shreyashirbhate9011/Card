@@ -1,0 +1,224 @@
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: orange; /* dark navbar to match your website */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* logo color */
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#navbar .nav-links li a {
+  color: #fff; /* link color */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#navbar .nav-links li a:hover,
+#navbar .nav-links li a.active {
+  background-color: rgb(143, 98, 14); /* active / hover matches card buttons */
+  color: #111;
+}
+
+/* Hamburger Menu (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff; /* hamburger bars color */
+  border-radius: 3px;
+}
+#main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: lightblue;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+/* Each card — 4 per row on desktop */
+.card {
+  flex: 1 1 calc(25% - 30px); /* 4 per row */
+  max-width: calc(25% - 30px);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: grey;
+  margin-top: 5px;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+/* Footer */
+/* Footer */
+#footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  width: 100%; /* ensure full width */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%; /* full width */
+  max-width: none; /* remove the previous max-width */
+  margin: 0; /* no centering */
+  padding: 0 50px; /* optional padding on sides */
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: orange;
+}
+
+.footer-section p,
+.footer-section ul li {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: orange;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* reduce side padding on mobile */
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* ✅ Responsive Breakpoints */
+
+/* Tablet - 3 per row */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+  }
+}
+
+/* Mobile - 2 per row */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+/* Small Mobile - 1 per row */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
